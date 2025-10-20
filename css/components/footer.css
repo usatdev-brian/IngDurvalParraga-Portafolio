@@ -1,0 +1,28 @@
+.site-footer {
+  grid-area: footer;
+  padding-block: 2rem 2.5rem;
+  text-align: center;
+  color: var(--color-muted);
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
+.site-footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer__link {
+  color: inherit;
+  transition: color var(--transition-base);
+}
+
+.site-footer__link:hover {
+  color: var(--color-primary);
+}
+
+.site-footer__copy {
+  margin: 0;
+}

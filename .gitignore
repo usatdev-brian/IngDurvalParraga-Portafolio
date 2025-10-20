@@ -1,0 +1,11 @@
+# Windows / VS Code
+Thumbs.db
+.vscode/
+.history/
+
+# Archivos grandes o temporales
+*.zip
+*.tmp
+
+# .docx (opcional)
+assets/docs/*.docx
