@@ -94,6 +94,14 @@ a {
     grid-template-columns: minmax(220px, 0.28fr) minmax(0, 0.72fr);
     align-items: start;
   }
+
+  body.has-sidebar-collapsed .site-sidebar {
+    display: none;
+  }
+
+  body.has-sidebar-collapsed .layout__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (min-width: 768px) {

@@ -5,6 +5,70 @@ function setCurrentYear() {
   }
 }
 
+function initHeaderMenu() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const toggle = header.querySelector(".site-header__toggle");
+  const sidebar = document.querySelector(".site-sidebar");
+  if (!toggle || !sidebar) return;
+
+  const label = toggle.querySelector(".site-header__toggle-label");
+  const breakpoint = window.matchMedia("(min-width: 960px)");
+  const isDesktop = () => breakpoint.matches;
+
+  const setExpanded = (expanded) => {
+    if (isDesktop()) {
+      document.body.classList.toggle("has-sidebar-collapsed", !expanded);
+      toggle.setAttribute("aria-expanded", String(expanded));
+      if (label) {
+        label.textContent = expanded
+          ? "Ocultar la navegaci\u00F3n de secciones"
+          : "Mostrar la navegaci\u00F3n de secciones";
+      }
+
+      if (!expanded) {
+        sidebar.classList.remove("is-open");
+      }
+    } else {
+      document.body.classList.remove("has-sidebar-collapsed");
+      toggle.setAttribute("aria-expanded", "false");
+      if (label) {
+        label.textContent = "Mostrar la navegaci\u00F3n de secciones";
+      }
+    }
+  };
+
+  const isCollapsed = () =>
+    isDesktop() && document.body.classList.contains("has-sidebar-collapsed");
+
+  if (isDesktop()) {
+    setExpanded(false);
+  } else {
+    setExpanded(true);
+  }
+
+  toggle.addEventListener("click", () => {
+    if (!isDesktop()) return;
+    const collapsed = isCollapsed();
+    setExpanded(collapsed);
+  });
+
+  const handleBreakpointChange = (event) => {
+    if (event.matches) {
+      setExpanded(false);
+    } else {
+      setExpanded(true);
+    }
+  };
+
+  if (typeof breakpoint.addEventListener === "function") {
+    breakpoint.addEventListener("change", handleBreakpointChange);
+  } else if (typeof breakpoint.addListener === "function") {
+    breakpoint.addListener(handleBreakpointChange);
+  }
+}
+
 function initSidebar() {
   const sidebar = document.querySelector(".site-sidebar");
   if (!sidebar) return;
@@ -284,6 +348,7 @@ function initReadMoreLists() {
 
 document.addEventListener("DOMContentLoaded", () => {
   setCurrentYear();
+  initHeaderMenu();
   initSidebar();
   initScrollSpy();
   initFilters();

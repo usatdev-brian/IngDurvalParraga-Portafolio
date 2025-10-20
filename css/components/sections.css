@@ -1284,6 +1284,7 @@
   gap: 10px;
   background: #fefefe;
   padding: 24px;
+  justify-content: space-evenly;
 }
 
 .text-profile__card {
