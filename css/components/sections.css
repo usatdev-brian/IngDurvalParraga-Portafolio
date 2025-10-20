@@ -429,9 +429,9 @@
   padding: 0;
   color: var(--color-muted);
 }
-.readmore-list li {
+/* .readmore-list li {
   margin: 0 0 0.5rem 0;
-}
+} */
 .readmore-list li p { margin: 0.25rem 0 0; color: var(--color-text); }
 
 .readmore-button {
@@ -458,7 +458,7 @@
   font-size: 1.05rem;
 }
 
-.readmore-list li { margin-bottom: 0.5rem; }
+/* .readmore-list li { margin-bottom: 0.5rem; } */
 
 
 
