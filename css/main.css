@@ -1,8 +1,11 @@
 @import url("./components/header.css");
 @import url("./components/sections.css");
 @import url("./components/footer.css");
+@import url("./components/components.css");
 
 :root {
+  /*---Colors---*/
+  --blue: #293e64;
   --color-primary: #0d3b66;
   --color-secondary: #f4d35e;
   --color-background: #f9f9fb;
@@ -15,6 +18,13 @@
   --transition-base: 200ms ease-in-out;
   --font-family-base: "Segoe UI", Arial, sans-serif;
   --light-blue: #325a7f2e;
+  /*--rules--*/
+  p {
+    margin: 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--blue);
+  }
 }
 
 *,

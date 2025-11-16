@@ -1,6 +1,6 @@
 .site-header {
   grid-area: header;
-  background: linear-gradient(90deg, var(--color-primary), #144a7c);
+  background: var(--blue);
   color: #ffffff;
   box-shadow: var(--shadow-sm);
   position: sticky;
@@ -30,7 +30,7 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgb(134 185 203);
   font-weight: 600;
   font-size: 1.1rem;
 }
