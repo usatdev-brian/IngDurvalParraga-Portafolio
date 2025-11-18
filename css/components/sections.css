@@ -7,7 +7,7 @@
   padding: 0 !important;
   /* box-shadow: var(--shadow-sm); */
   position: relative;
-      /* gap: 20px; */
+      gap: 15px;
     display: flex;
     flex-direction: column;
 }
@@ -448,7 +448,7 @@
 
 /* Make list bullets more visible and circular */
 .readmore-list {
-  list-style: disc; /* fallback */
+  list-style: auto; /* fallback */
   padding-left: 1.4rem;
 }
 
@@ -1252,7 +1252,7 @@
 
 .media-item__embed iframe {
   width: 100%;
-  min-height: 220px;
+  min-height: 344px;
   border: 0;
 }
 
