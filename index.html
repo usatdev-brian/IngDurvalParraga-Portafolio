@@ -7,6 +7,8 @@
     <title>Ing. Durval P&aacute;rraga</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/components/image_gallery.css">
+    <script src="js/components/img_gallery.js" defer></script>
 </head>
 
 <body>
@@ -124,6 +126,72 @@
                                 <img src="assets/images/IngDurvalProfile.png" alt="Durval P&#225;rraga Morales"
                                     loading="lazy">
                             </div>
+                        </div>
+
+                        <!-- Galería de imagenes -->
+                        <div class="gallery-wrapper">
+                            <h2>Galer&#237;a de Im&#225;genes</h2>
+                            <!-- Botones de navegación -->
+                            <button class="nav-btn prev" aria-label="Anterior">&#10094;</button>
+                            <button class="nav-btn next" aria-label="Siguiente">&#10095;</button>
+
+                            <!-- Galería -->
+                            <div class="gallery-track">
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.19.45%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 1" data-title="Imagen 1" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.19.55%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 2" data-title="Imagen 2" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.20.31%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 3" data-title="Imagen 3" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.21.15%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 4" data-title="Imagen 4" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.21.39%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 5" data-title="Imagen 5" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.22.32%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 6" data-title="Imagen 6" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.22.47%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 7" data-title="Imagen 7" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.23.49%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 8" data-title="Imagen 8" loading="lazy">
+                                </article>
+
+                                <article class="gallery-card">
+                                    <img src="assets/images/IngDurval-Album/WhatsApp%20Image%202025-11-10%20at%2011.24.35%20PM.jpeg"
+                                        alt="Galería Ing. Durval Párraga foto 9" data-title="Imagen 9" loading="lazy">
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="gallery-lightbox" id="gallery-lightbox" hidden>
+                            <figure class="gallery-lightbox__content">
+                                <button class="gallery-lightbox__close" type="button" aria-label="Cerrar">&times;</button>
+                                <div class="gallery-lightbox__image-frame">
+                                    <img src="" alt="" class="gallery-lightbox__img">
+                                    <figcaption class="gallery-lightbox__caption">Imagen</figcaption>
+                                </div>
+                            </figure>
                         </div>
 
 
@@ -366,51 +434,6 @@
                             <p class="section__description">Seleccionados (ver más en cada bloque).</p>
                         </div>
 
-                        <!-- A. Carrusel de imágenes -->
-                        <div class="content-block">
-                            <h3>Galería de proyectos</h3>
-                            <!-- <div class="carousel" data-scroll-size="600" aria-label="Carrusel de imágenes de proyectos">
-                                <button class="carousel__nav carousel__nav--prev" aria-label="Anterior">‹</button>
-                                <div class="carousel__track">
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/contruccion-civil-geotecnia-gica-lima-peru-6.jpg"
-                                            alt="Proyecto 1"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/ing-civil-1024x683.jpg"
-                                            alt="Proyecto 2"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/estudio-de-suelo-para-construccion.jpg"
-                                            alt="Proyecto 3"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/geotecnia-10-1024x768-1.jpg"
-                                            alt="Proyecto 4"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/mecanica-suelos.jpg"
-                                            alt="Proyecto 5"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/image7.jpeg"
-                                            alt="Proyecto 6"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/image8.jpeg"
-                                            alt="Proyecto 7"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/image9.jpeg"
-                                            alt="Proyecto 8"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/image10.jpeg"
-                                            alt="Proyecto 9"></figure>
-                                    <figure class="carousel__item"><img
-                                            src="assets/images/6e839fdc-a996-4fb7-857c-561063b45097/IMG_1847-compressed.jpg"
-                                            alt="Proyecto 10"></figure>
-                                </div>
-
-                                <button class="carousel__nav carousel__nav--next" aria-label="Siguiente">›</button>
-                            </div> -->
-                            <div class="projects-image__gallery">
-
-                            </div>
-                        </div>
-
                         <!-- B. Proyectos en Gestión del Riesgo de Desastres y Resiliencia Urbana -->
                         <div class="content-block proj-section">
                             <h3>Proyectos en Gestión del Riesgo de Desastres y Resiliencia Urbana</h3>
@@ -454,61 +477,87 @@
                         <div class="content-block proj-section">
                             <h3>Gestión, Diseño y Ejecución de Proyectos de Ingeniería</h3>
                             <ol class="readmore-list" data-show="3">
-                                <li><strong>2025 – La Paz – Construcción de obras de control de erosión, sedimentos y
-                                        canalización en la cuenca del río Aruntaya.</strong></li>
-                                <li><strong>2025 – La Paz – Construcción de obras de mitigación de riesgos geodinámicos,
-                                        zona Los Rosales Alto Calacoto.</strong></li>
-                                <li><strong>2025 – La Paz – Construcción de obras de mitigación de riesgos geodinámicos,
-                                        zona Complementación Pedregal y adyacentes, Distrito 19.</strong></li>
-                                <li><strong>2025 – La Paz – Construcción de obras de mitigación de riesgos geodinámicos,
-                                        zona Complementación Pedregal y adyacentes, Distrito 19.</strong></li>
-                                <li><strong>2024 – La Paz – Reparación de obras hidráulicas en la cuenca del río
-                                        Achumani, Distritos 18 y 22.</strong></li>
-                                <li><strong>2024 – La Paz – Construcción y reparación de obras de control hidráulico en
-                                        el río Kullkujahuira, Distrito 10.</strong></li>
-                                <li><strong>2024 – La Paz – Obra complementaria de estabilización, zona Bajo San Isidro,
-                                        Distrito 17.</strong></li>
-                                <li><strong>2024 – La Paz – Construcción de obras de estabilización en la cuenca alta
-                                        del río Tacagua, zona Niño Kollo.</strong></li>
-                                <li><strong>2024 – La Paz – Construcción de obras de control hidráulico en el río Rojo,
-                                        zona Alto Gramadal.</strong></li>
-                                <li><strong>2024 – La Paz – Construcción de obras de mitigación de riesgos geodinámicos
-                                        en las subcuencas quebrada Entel 1 y río Huacollo, Distrito 18.</strong></li>
-                                <li><strong>2024 – La Paz – Construcción de obras de contención y caída de rocas, zona
-                                        Aranjuez.</strong></li>
-                                <li><strong>2024 – La Paz – Construcción de obras de retención de talud y control de
-                                        drenaje, Av. Libertador, zona Soqueri.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de embovedado del río Auquisamaña.</strong>
+                                <li><strong>2025 – La Paz –</strong> Construcción de obras de control de erosión,
+                                    sedimentos y
+                                    canalización en la cuenca del río Aruntaya.</li>
+                                <li><strong>2025 – La Paz –</strong> Construcción de obras de mitigación de riesgos
+                                    geodinámicos,
+                                    zona Los Rosales Alto Calacoto.</li>
+                                <li><strong>2025 – La Paz –</strong> Construcción de obras de mitigación de riesgos
+                                    geodinámicos,
+                                    zona Complementación Pedregal y adyacentes, Distrito 19.</li>
+                                <li><strong>2025 – La Paz –</strong> Construcción de obras de mitigación de riesgos
+                                    geodinámicos,
+                                    zona Complementación Pedregal y adyacentes, Distrito 19.</li>
+                                <li><strong>2024 – La Paz –</strong> Reparación de obras hidráulicas en la cuenca del
+                                    río
+                                    Achumani, Distritos 18 y 22.</li>
+                                <li><strong>2024 – La Paz –</strong> Construcción y reparación de obras de control
+                                    hidráulico en
+                                    el río Kullkujahuira, Distrito 10.</li>
+                                <li><strong>2024 – La Paz –</strong> Obra complementaria de estabilización, zona Bajo
+                                    San Isidro,
+                                    Distrito 17.</li>
+                                <li><strong>2024 – La Paz –</strong> Construcción de obras de estabilización en la
+                                    cuenca alta
+                                    del río Tacagua, zona Niño Kollo.</li>
+                                <li><strong>2024 – La Paz –</strong> Construcción de obras de control hidráulico en el
+                                    río Rojo,
+                                    zona Alto Gramadal.</li>
+                                <li><strong>2024 – La Paz –</strong> Construcción de obras de mitigación de riesgos
+                                    geodinámicos
+                                    en las subcuencas quebrada Entel 1 y río Huacollo, Distrito 18.</li>
+                                <li><strong>2024 – La Paz –</strong> Construcción de obras de contención y caída de
+                                    rocas, zona
+                                    Aranjuez.</li>
+                                <li><strong>2024 – La Paz –</strong> Construcción de obras de retención de talud y
+                                    control de
+                                    drenaje, Av. Libertador, zona Soqueri.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de embovedado del río Auquisamaña.
                                 </li>
-                                <li><strong>2023 – La Paz – Construcción de obras de captación de aguas subterráneas,
-                                        zonas San Isidro Alto y Bajo San Isidro.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de obras de estabilización, zona Bajo San
-                                        Isidro.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de obras de estabilización y captación de aguas
-                                        subterráneas, zona Villa Armonía.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de obras de mitigación de riesgo geodinámico,
-                                        Distrito 16.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de embovedado del río Kachuañajahuira, aguas
-                                        arriba de la calle 23 de Marzo, Distrito 16.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de obras hidráulicas de regulación para la
-                                        cuenca del río Irpavi, zona Irpavi, Distrito 18.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de obra de estabilización en la calle Chango
-                                        Juan López.</strong></li>
-                                <li><strong>2023 – La Paz – Construcción de obras de estabilización en la Av. Libertad,
-                                        sector Puente Libertad, zonas Inmaculada Concepción y 14 de Septiembre.</strong>
+                                <li><strong>2023 – La Paz –</strong> Construcción de obras de captación de aguas
+                                    subterráneas,
+                                    zonas San Isidro Alto y Bajo San Isidro.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de obras de estabilización, zona Bajo
+                                    San
+                                    Isidro.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de obras de estabilización y captación
+                                    de aguas
+                                    subterráneas, zona Villa Armonía.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de obras de mitigación de riesgo
+                                    geodinámico,
+                                    Distrito 16.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de embovedado del río Kachuañajahuira,
+                                    aguas
+                                    arriba de la calle 23 de Marzo, Distrito 16.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de obras hidráulicas de regulación
+                                    para la
+                                    cuenca del río Irpavi, zona Irpavi, Distrito 18.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de obra de estabilización en la calle
+                                    Chango
+                                    Juan López.</li>
+                                <li><strong>2023 – La Paz –</strong> Construcción de obras de estabilización en la Av.
+                                    Libertad,
+                                    sector Puente Libertad, zonas Inmaculada Concepción y 14 de Septiembre.
                                 </li>
-                                <li><strong>2022 – La Paz – Construcción de obras hidráulicas de regulación para la
-                                        cuenca del río Orckojahuira, Distrito 13.</strong></li>
-                                <li><strong>2022 – La Paz – Construcción de obra de estabilización entre calles Bernardo
-                                        Bitti y General Lanza, zona San Luis.</strong></li>
-                                <li><strong>2022 – La Paz – Construcción de obras de estabilización de talud y drenaje
-                                        superficial, Urbanización 23 de Marzo.</strong></li>
-                                <li><strong>2022 – La Paz – Construcción de doble embovedado del río Cotahuma, aguas
-                                        abajo de la Av. Francisco Bedregal, sector Sur, Distrito 21.</strong></li>
-                                <li><strong>2021 – La Paz – Construcción de obras de estabilización, zona San Martín
-                                        parte baja.</strong></li>
-                                <li><strong>2021 – La Paz – Construcción de obras de estabilización entre calles 22 y
-                                        23, zona La Ventilla y Barrio Municipal Bella Vista.</strong></li>
+                                <li><strong>2022 – La Paz –</strong> Construcción de obras hidráulicas de regulación
+                                    para la
+                                    cuenca del río Orckojahuira, Distrito 13.</li>
+                                <li><strong>2022 – La Paz –</strong> Construcción de obra de estabilización entre calles
+                                    Bernardo
+                                    Bitti y General Lanza, zona San Luis.</li>
+                                <li><strong>2022 – La Paz –</strong> Construcción de obras de estabilización de talud y
+                                    drenaje
+                                    superficial, Urbanización 23 de Marzo.</li>
+                                <li><strong>2022 – La Paz –</strong> Construcción de doble embovedado del río Cotahuma,
+                                    aguas
+                                    abajo de la Av. Francisco Bedregal, sector Sur, Distrito 21.</li>
+                                <li><strong>2021 – La Paz –</strong> Construcción de obras de estabilización, zona San
+                                    Martín
+                                    parte baja.</li>
+                                <li><strong>2021 – La Paz –</strong> Construcción de obras de estabilización entre
+                                    calles 22 y
+                                    23, zona La Ventilla y Barrio Municipal Bella Vista.</li>
                             </ol>
                             <!-- no mostrar botón cuando la lista tiene <=3 elementos -->
                         </div>

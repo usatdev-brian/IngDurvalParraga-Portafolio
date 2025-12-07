@@ -39,6 +39,7 @@
 .layout__grid .site-content {
   display: grid;
   gap: 2rem;
+  min-width: 0; /* evita desbordes al contraer contenedor */
 }
 
 .site-sidebar {

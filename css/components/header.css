@@ -8,6 +8,7 @@
   z-index: 950;
   width: 100%;
   padding-block: 1rem;
+  z-index: 10;
 }
 
 .site-header__container {

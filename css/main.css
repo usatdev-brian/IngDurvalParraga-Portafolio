@@ -59,10 +59,9 @@ a {
 }
 
 .container {
-  /* width: min(1180px, 100%); */
+  width: min(1180px, 100% - 2rem);
   margin: 0 auto;
-  /* padding-inline: 1.5rem; */
-  padding: 30px !important;
+  padding: 30px;
 }
 
 .sr-only {
@@ -99,7 +98,11 @@ a {
   display: grid;
   gap: 1.5rem;
 }
-
+.layout__grid .site-content {
+    display: block;
+    min-width: 0px;
+    gap: 2rem;
+}
 @media (min-width: 960px) {
   .layout__grid {
     grid-template-columns: minmax(220px, 0.28fr) minmax(0, 0.72fr);
@@ -117,6 +120,7 @@ a {
 
 @media (min-width: 768px) {
   .container {
+    width: min(1240px, 100% - 3rem);
     padding-inline: 3rem;
   }
 
