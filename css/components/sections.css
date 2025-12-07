@@ -1326,6 +1326,59 @@
   align-items: center;
 }
 
+@media (max-width: 640px) {
+  .links-profile__card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.image-profile__card {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .profile__card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "image"
+      "info"
+      "links";
+    gap: 12px;
+  }
+
+  .text-profile__card {
+    width: 100%;
+    display: contents;
+  }
+
+  .profile-card__name {
+    grid-area: name;
+  }
+
+  .divider-profile__card {
+    display: none;
+  }
+
+  .info-profile__card {
+    grid-area: info;
+  }
+
+  .links-profile__card {
+    grid-area: links;
+    width: 100%;
+  }
+
+  .image-profile__card {
+    width: 100%;
+    justify-content: center;
+    grid-area: image;
+  }
+}
+
 /*-----------------*/
 .title-trayectoria_profesional {
   display: flex;
